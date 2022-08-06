@@ -1,0 +1,28 @@
+img{
+	max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
+
+span {
+  vertical-align: middle;
+}
+
+a{
+	text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  color: $gray-900;
+}
