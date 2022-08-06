@@ -1,0 +1,11 @@
+.dashboard {
+  width: 100%;
+
+  a:hover{
+    color: $success;
+  }
+
+  &__content {
+    height: calc(100vh - 32px - 32px - 36px - 48px);
+  }
+}

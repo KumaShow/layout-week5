@@ -1,0 +1,41 @@
+.c-pagination {
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+  
+  a {
+    width: 32px;
+    height: 32px;
+    padding: 2px 0;
+    border: 1px solid $success;
+
+  }
+  a:hover, .is-active  {
+    color: $white;
+    background-color: $success;
+  }
+
+  &__item {
+    align-items: center;
+    
+    &:first-of-type a,
+    &:last-of-type a {
+      color: $success;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    &:not(:last-child) a{
+      border-right: none;
+    }
+
+    &:first-of-type a {
+      border-radius: 2px 0 0 2px;
+    }
+    &:last-of-type a {
+      border-radius: 0 2px 2px 0;
+    }
+  }
+}

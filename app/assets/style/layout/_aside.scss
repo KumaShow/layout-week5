@@ -1,0 +1,43 @@
+.sidebar {
+  min-height: 100vh;
+
+  &__content {
+    height: calc(100% - 88px - 24px); // 100vh - logo - pt24px
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    a {
+      position: relative;
+    }
+    a:hover{
+      color: $gray-900;
+      background-color: $gray-400;
+    }
+    
+    a[class$="active"]{
+      color: $success;
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $success;
+        width: 4px;
+        height: 100%;
+      }
+    }
+  }
+}
+
+.user {
+  &__photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: url("/assets/images/andychen.jpeg") center center no-repeat;
+    background-size: cover;
+  }
+}
