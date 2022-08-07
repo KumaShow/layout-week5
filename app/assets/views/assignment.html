@@ -5,30 +5,30 @@ engine: ejs
 current: index
 ---
 
-<section class="dashboard container u-p-4">
-  <header>
-    <div class="d-flex justify-content-between mb-5">
-      <div class="d-flex align-items-center">
-        <h2 class="dashboard__title fs-4 fw-bold me-5">Assignment</h2>
-        <a href="#!" class="d-flex fw-bold">
-          All Courses
-          <span class="material-symbols-outlined link-success ms-2">
-            expand_more
-          </span> 
-        </a>
-      </div>
-      <div class="d-flex align-items-center">
-        <a href="#!" class="me-4"><span class="material-symbols-outlined">
-          search
-        </span></a>
-        <a href="#!"><span class="material-symbols-outlined">
-          notifications_active
-        </span></a>
-      </div>
+<section class="dashboard u-p-4">
+  <!-- 後台標題 -->
+  <header  class="d-flex justify-content-between mb-5">
+    <div class="d-flex align-items-center">
+      <h2 class="dashboard__title fs-4 fw-bold me-5">Assignment</h2>
+      <a href="#!" class="d-flex fw-bold">
+        All Courses
+        <span class="material-symbols-outlined link-success ms-2">
+          expand_more
+        </span> 
+      </a>
+    </div>
+    <div class="d-flex align-items-center">
+      <a href="#!" class="me-4"><span class="material-symbols-outlined">
+        search
+      </span></a>
+      <a href="#!"><span class="material-symbols-outlined">
+        notifications_active
+      </span></a>
     </div>
   </header>
-
+  <!-- 後台主內容區 -->
   <section class="dashboard__content">
+    <!-- 篩選bar -->
     <div class="d-flex justify-content-between align-items-center">
       <a href="#!" class="d-flex fw-bold u-mb-6">
         All (4)
@@ -36,13 +36,13 @@ current: index
           expand_more
         </span> 
       </a>
-
       <p class="text-secondary u-fs-12">2 comments</p>
     </div>
-
-    <section class="assignment">
+    <!-- 任務指派區 -->
+    <section class="assignment d-flex">
+      <!-- 左邊: task -->
       <ul class="assignment-goal">
-        <li class="border u-p-12">
+        <li class="border u-p-12 u-bg-gray-400">
           <a href="#!">
             <div class="d-flex justify-content-between align-items-center">
               <p class="u-fs-12">Chapter Assignment 2</p>
@@ -94,11 +94,123 @@ current: index
           </a>
         </li>
       </ul>
+      <!-- 右邊: task細項 -->
+      <div class="assignment-content">
+        <header class="d-flex justify-content-between align-items-center u-bg-gray-400 px-3 u-py-12 border">
+          <div>
+            <p class="u-fs-12">Chapter Assignment 2 / HTML&CSS</p>
+            <h2 class="fw-bold">Please check this file for me, thanks!</h2>
+          </div>
+          <a href="#!"><span class="material-symbols-outlined fw-bold">
+            more_vert
+          </span></a>
+        </header>
 
-      <div class="assignment-detail">
+        <div class="assignment-detail border mb-3">
+          <div class="assignment-detail__comment">
+            <div class="assignment-item d-flex mb-3 u-pt-2 u-ps-2 u-pe-4">
+              <picture class="assignment__photo--1 u-user-photo-rounded me-2"></picture>
+              <div class="border-bottom pb-3">
+                <h3 class="fw-bold mb-1">Emily Wang</h3>
+                <p class="u-fs-12 text-secondary mb-3">10:38 AM (4 hours ago)</p>
+                <p class="u-fs-14 mb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="u-mark-tag">div</span> is bigger than the height of the <span class="u-mark-tag">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin.<br>What is the gap or extra space below image?</p>
+                <div class="d-inline-block">
+                  <a href="#!" class="fw-bold d-flex u-bg-gray-400 py-2 u-ps-12 u-pe-2 border rounded">
+                    <span class="material-symbols-outlined fw-bold me-2">
+                    attach_file
+                    </span>
+                    HW-2-David.zip</a>
+                </div>
+              </div>
+            </div>
+            
+            <div class="assignment-item d-flex mb-3 u-pt-2 u-ps-2 u-pe-4">
+              <picture class="assignment__photo--2 u-user-photo-rounded me-2"></picture>
+              <div>
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <h3 class="fw-bold mb-1">Andy Chen (You)</h3>
+                    <p class="u-fs-12 text-secondary"> 13:24 AM (1 hours ago)</p>
+                  </div>
+                  <div>
+                    <span id="grade-icon" class="material-symbols-outlined no-fill me-4">
+                      <a href="#!">grade</a>
+                      </span>
+                    <span class="material-symbols-outlined">
+                      <a href="#!">edit</a>
+                    </span>
+                  </div>
+                </div>
+  
+                <p>
+                  Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.<br><br>You can:<br><br>&emsp;• adjust the <span class="u-mark-tag">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="u-mark-tag">middle</span> ) or <br>&emsp;• change the <span class="u-mark-tag">display</span> so it isn’t inline.
+                </p>
+              </div>
+            </div>
 
+          </div>
+
+          <!-- editor編輯器 -->
+          <div class="editor border-top d-none" id="editor">
+            <header class="d-flex align-items-center">
+              <a href="#!" class="fw-bold">Body Text
+                <span class="material-symbols-outlined ms-2">
+                  arrow_drop_down
+                </span>
+              </a>
+              <span class="material-symbols-outlined">
+                <a href="#!">format_bold</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">format_italic</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">format_list_bulleted</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">format_list_numbered</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">image</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">link</a>
+              </span>
+              <span class="material-symbols-outlined">
+                <a href="#!">code</a>
+              </span>
+            </header>
+
+            <div class="form-floating">
+              <textarea class="form-control border-0" placeholder="Leave a comment here" id="floatingTextarea" style="height: 263px;resize: none"></textarea>
+              <label for="floatingTextarea" class="u-text-gray-400">Reply an answer…</label>
+            </div>
+
+            <div class="d-flex justify-content-end mb-3">
+              <a href="#!" class="fw-bold btn btn-outline-success u-hover-white me-2" id="editor-cancel">Cancel</a>
+              <a href="#!" class="fw-bold btn btn-success u-hover-white me-4">Reply</a>
+            </div>
+          </div>
+        </div>
+        <!-- assignment 底部 navbar -->
+        <nav class="assignment-nav mb-3 d-flex justify-content-between align-items-center" id="assignment-nav">
+          <div>
+            <span class="material-symbols-outlined p-2 me-4">
+              <a href="#!">navigate_before</a>
+            </span>
+            <span class="material-symbols-outlined p-2">
+              <a href="#!">navigate_next</a>
+            </span>
+          </div>
+
+          <div class="d-flex">
+            <a href="#!" class="fw-bold btn btn-outline-success u-hover-white me-3">Mark as read</a>
+            <a href="#editor" class="fw-bold btn btn-success u-hover-white" id="assignment-reply">Reply</a>
+          </div>
+        </nav>
       </div>
     </section>
+
 
   </section>
 
