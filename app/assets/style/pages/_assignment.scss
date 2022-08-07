@@ -1,3 +1,44 @@
 .assignment {
-  width: 35%;
+  width: 100%;
+  gap: 2%;
+
+  &-goal {
+    width: 35%;
+  }
+
+  &-content {
+    width: 63%;
+  }
+
+  &-detail {
+    // overflow-y:scroll;
+    &__comment {
+      overflow-y:scroll;
+      max-height: 60vh;
+    }
+  }
+
+  &__photo {
+    &--1 {
+      background: url("/assets/images/emilywang.jpeg")center center no-repeat;
+      background-size: cover;
+    }
+
+    &--2 {
+      background: url("/assets/images/andychen.jpeg") center center no-repeat;
+      background-size: cover;
+    }
+  }
+
+}
+
+.editor {
+  header {
+    background-color: $gray-400;
+    padding: 18px 25px;
+
+    & > * {
+      margin-right: 24px;
+    }
+  }
 }
