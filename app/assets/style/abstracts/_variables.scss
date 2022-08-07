@@ -13,11 +13,11 @@ $black:    #000;
 
 $u-spacer: 8px; 
 $u-spacers: (
-  1: $u-spacer,
-  2: $u-spacer * 2,
-  3: $u-spacer * 3, 
-  4: $u-spacer * 4, 
-  5: $u-spacer * 5, 
+  1: $u-spacer,     // 8
+  2: $u-spacer * 2, // 16
+  3: $u-spacer * 3, // 24
+  4: $u-spacer * 4, // 32
+  5: $u-spacer * 5, // 40
 );
 
 // bs
