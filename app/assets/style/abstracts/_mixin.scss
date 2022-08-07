@@ -17,6 +17,14 @@
     padding-left: $value;
   }
 
+  .u-pe-#{$key} {
+    padding-right: $value;
+  }
+
+  .u-pt-#{$key} {
+    padding-top: $value;
+  }
+
   .u-pb-#{$key} {
     padding-bottom: $value;
   }
