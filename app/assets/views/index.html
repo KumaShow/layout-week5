@@ -6,6 +6,7 @@ current: index
 ---
 
 <section class="dashboard container u-p-4">
+  <!-- 後台標題 -->
   <header>
     <div class="d-flex justify-content-between mb-5">
       <div class="d-flex align-items-center">
@@ -26,7 +27,7 @@ current: index
       </div>
     </div>
   </header>
-
+  <!-- 後台主內容區 admin table -->
   <section class="dashboard__content d-flex flex-column justify-content-between">
     <table class="table table-hover">
       <thead class="fw-bold">
@@ -50,7 +51,7 @@ current: index
           <td>emir.wicks@mail.com</td>
           <td>Yes</td>
           <td class="d-flex">
-            <a href="#!" class="me-4">
+            <a href="#!" class="me-4" data-bs-toggle="modal" data-bs-target="#viewModal">
               <span class="material-symbols-outlined">
                 visibility
               </span>
@@ -188,7 +189,7 @@ current: index
         </tr>
       </tbody>
     </table>
-
+    <!-- pagination -->
     <ul class="c-pagination">
       <li class="c-pagination__item">
         <a href="#!" class="c-pagination__link">
@@ -216,6 +217,43 @@ current: index
     </ul>
   </section>
 
-
-
 </section>
+
+<!-- newModal -->
+
+
+<!-- viewModal -->
+<div class="modal fade view-modal" id="viewModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="d-flex u-p-4">
+        <div class="view-modal__img me-4"></div>
+        <div class="view-modal__text">
+          <div class="d-flex justify-content-between mb-2">
+            <p>#1</p>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <p>Admin</p>
+          <h2 class="fw-bold mb-2">Emir Wicks</h2>
+          <p class="text-secondary u-fs-14 mb-3">emir.wicks@mail.com</p>
+          <div class="d-flex justify-content-between u-mb-32">
+            <span class="bg-light py-1 px-2 border-0 rounded">Verified</span>
+            <span id="btn-more" class="material-symbols-outlined btn-more">
+              <a href="#!">expand_more</a>
+            </span>
+            <span id="btn-more" class="material-symbols-outlined btn-more d-none">
+              <a href="#!">expand_less</a>
+            </span>
+          </div>
+          <div class="view-modal__btn d-flex d-none">
+            <button type="button" class="view-modal__btn--1 btn btn-outline-danger" data-bs-dismiss="modal">Deactivate</button>
+            <button type="button" class="view-modal__btn--2 btn btn-success">Edit</button>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- editModal -->

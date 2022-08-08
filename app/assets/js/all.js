@@ -19,4 +19,9 @@ $(document).ready(() => {
     $('#assignment-nav').removeClass('d-none');
   })
 
+  $('.btn-more').click(function (e) {
+    $('.btn-more').toggleClass('d-none');
+    $('.view-modal__btn').toggleClass('d-none');
+  })
+
 });
