@@ -36,6 +36,9 @@
 .u-mb-6 {
   margin-bottom: 6px;
 }
+.u-mb-18 {
+  margin-bottom: 18px;
+}
 .u-mb-32 {
   margin-bottom: 32px;
 }
@@ -60,4 +63,11 @@
 
 .u-hover-white:hover {
   color: $white !important;
+}
+
+.u-btn-outline-gray-400 {
+  border: 1px solid $gray-400;
+  &:hover {
+    background-color: $gray-400;
+  }
 }
