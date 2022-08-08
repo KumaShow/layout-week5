@@ -1,0 +1,52 @@
+---
+title: modal | 後台
+layout: ./app/layout.ejs
+engine: ejs
+---
+
+<button type="button" class="btn btn-primary h-25" data-bs-toggle="modal" data-bs-target="#newModal">
+  Launch demo modal
+</button>
+
+<div class="modal new-modal" id="newModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content new-modal__content">
+      <div class="modal-header border-0">
+        <h5 class="modal-title fs-4">New Admin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <h6 class="fw-bold fs-5">Account</h6>
+          <form action="#!" method="post" class="border-bottom">
+            <div class="form__group">
+              <label for="name" class="u-fs-14">Name</label><br>
+              <input type="text" id="name" name="name" class="w-100">
+            </div>
+            <div class="form__group mb-4">
+              <label for="email" class="u-fs-14">Email</label><br>
+              <input type="email" id="email" name="email" class="w-100">
+            </div>
+          </form>
+        </div>
+
+        <div class="border-bottom py-4">
+          <h6 class="fw-bold fs-5 u-mb-18">Verification</h6>
+          <p class="fw-bold u-mb-18">
+            <span class="material-symbols-outlined text-danger me-2">
+              warning
+            </span>
+            Unverified
+          </p>
+          <a href="#!" class="btn u-btn-outline-gray-400 link-success fw-bold w-100">Send Verification Mail</a>
+        </div>
+
+
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-success" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
