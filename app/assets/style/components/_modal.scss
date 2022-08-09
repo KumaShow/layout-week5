@@ -3,7 +3,7 @@
   &__img {
     background: url("../images/emir.jpeg") center center no-repeat;
     background-size: cover;
-    width: 141px;
+    min-width: 141px;
     height: 141px;
   }
 
@@ -20,12 +20,5 @@
     &--2 {
       width: 40%;
     }
-  }
-}
-
-.new-modal {
-
-  &__content {
-    // max-width: 480px;
   }
 }
