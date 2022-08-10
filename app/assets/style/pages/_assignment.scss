@@ -11,7 +11,6 @@
   }
 
   &-detail {
-    // overflow-y:scroll;
     &__comment {
       overflow-y:scroll;
       max-height: 60vh;
@@ -20,12 +19,12 @@
 
   &__photo {
     &--1 {
-      background: url("/assets/images/emilywang.jpeg")center center no-repeat;
+      background: url("../images/emilywang.jpeg")center center no-repeat;
       background-size: cover;
     }
 
     &--2 {
-      background: url("/assets/images/andychen.jpeg") center center no-repeat;
+      background: url("../images/andychen.jpeg") center center no-repeat;
       background-size: cover;
     }
   }
