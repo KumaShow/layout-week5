@@ -9,10 +9,11 @@
 @import "base/reset";
 @import "base/base";
 
-@import "components/modal";
-@import "components/pagination";
-
 @import "layout/aside";
 
 @import "pages/index";
 @import "pages/assignment";
+
+@import "components/modal";
+@import "components/pagination";
+
