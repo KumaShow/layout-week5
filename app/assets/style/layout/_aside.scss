@@ -8,29 +8,28 @@
     justify-content: space-between;
   }
 
-  &__menu {
-    a {
-      position: relative;
-    }
-    a:hover{
+  &__link {
+    position: relative;
+
+    &:hover{
       color: $gray-900;
       background-color: $gray-400;
     }
-    
-    a[class$="active"]{
-      color: $success;
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: $success;
-        width: 4px;
-        height: 100%;
-      }
+  }
+  .is-active{
+    color: $success;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: $success;
+      width: 4px;
+      height: 100%;
     }
   }
 }
+
 
 .user {
   &__photo {
