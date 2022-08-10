@@ -277,7 +277,7 @@ body {
       height: 100%; }
 
 .user__photo {
-  background: url("/assets/images/andychen.jpeg") center center no-repeat;
+  background: url("../images/andychen.jpeg") center center no-repeat;
   background-size: cover; }
 
 .dashboard {
@@ -298,10 +298,10 @@ body {
     overflow-y: scroll;
     max-height: 60vh; }
   .assignment__photo--1 {
-    background: url("/assets/images/emilywang.jpeg") center center no-repeat;
+    background: url("../images/emilywang.jpeg") center center no-repeat;
     background-size: cover; }
   .assignment__photo--2 {
-    background: url("/assets/images/andychen.jpeg") center center no-repeat;
+    background: url("../images/andychen.jpeg") center center no-repeat;
     background-size: cover; }
 
 .editor header {
