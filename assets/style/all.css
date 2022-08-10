@@ -116,6 +116,12 @@
 .u-pb-5 {
   padding-bottom: 40px; }
 
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
+
+.no-fill {
+  font-variation-settings: 'FILL' 0; }
+
 .u-mark-tag {
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
@@ -128,6 +134,14 @@
 
 .u-bg-gray-400 {
   background-color: #ced4da; }
+
+.u-hover-white:hover {
+  color: #fff !important; }
+
+.u-btn-outline-gray-400 {
+  border: 1px solid #ced4da; }
+  .u-btn-outline-gray-400:hover {
+    background-color: #ced4da; }
 
 .u-fs-12 {
   font-size: 12px; }
@@ -151,27 +165,10 @@
 .u-mb-18 {
   margin-bottom: 18px; }
 
-.u-mb-32 {
-  margin-bottom: 32px; }
-
 .u-user-photo-rounded {
   min-width: 40px;
   height: 40px;
   border-radius: 50%; }
-
-.material-symbols-outlined {
-  font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 48; }
-
-.no-fill {
-  font-variation-settings: 'FILL' 0; }
-
-.u-hover-white:hover {
-  color: #fff !important; }
-
-.u-btn-outline-gray-400 {
-  border: 1px solid #ced4da; }
-  .u-btn-outline-gray-400:hover {
-    background-color: #ced4da; }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -249,10 +246,74 @@ body {
   line-height: 1.5;
   color: #212529; }
 
+.sidebar {
+  min-height: 100vh; }
+  .sidebar__content {
+    height: calc(100% - 88px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .sidebar__link {
+    position: relative; }
+    .sidebar__link:hover {
+      color: #212529;
+      background-color: #ced4da; }
+  .sidebar .is-active {
+    color: #198754; }
+    .sidebar .is-active::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #198754;
+      width: 4px;
+      height: 100%; }
+
+.user__photo {
+  background: url("/assets/images/andychen.jpeg") center center no-repeat;
+  background-size: cover; }
+
+.dashboard {
+  overflow-y: scroll; }
+  .dashboard a:hover {
+    color: #198754; }
+  .dashboard__content {
+    height: calc(100vh - 32px - 32px - 36px - 48px); }
+
+.assignment {
+  width: 100%;
+  gap: 2%; }
+  .assignment-goal {
+    width: 35%; }
+  .assignment-content {
+    width: 63%; }
+  .assignment-detail__comment {
+    overflow-y: scroll;
+    max-height: 60vh; }
+  .assignment__photo--1 {
+    background: url("/assets/images/emilywang.jpeg") center center no-repeat;
+    background-size: cover; }
+  .assignment__photo--2 {
+    background: url("/assets/images/andychen.jpeg") center center no-repeat;
+    background-size: cover; }
+
+.editor header {
+  background-color: #ced4da;
+  padding: 18px 25px; }
+  .editor header > * {
+    margin-right: 24px; }
+
 .view-modal__img {
   background: url("../images/emir.jpeg") center center no-repeat;
   background-size: cover;
-  width: 141px;
+  min-width: 141px;
   height: 141px; }
 
 .view-modal__text {
@@ -297,69 +358,5 @@ body {
       border-radius: 2px 0 0 2px; }
     .c-pagination__item:last-of-type a {
       border-radius: 0 2px 2px 0; }
-
-.sidebar {
-  min-height: 100vh; }
-  .sidebar__content {
-    height: calc(100% - 88px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .sidebar__menu a {
-    position: relative; }
-  .sidebar__menu a:hover {
-    color: #212529;
-    background-color: #ced4da; }
-  .sidebar__menu a[class$="active"] {
-    color: #198754; }
-    .sidebar__menu a[class$="active"]::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 0;
-      background-color: #198754;
-      width: 4px;
-      height: 100%; }
-
-.user__photo {
-  background: url("/assets/images/andychen.jpeg") center center no-repeat;
-  background-size: cover; }
-
-.dashboard {
-  overflow-y: scroll; }
-  .dashboard a:hover {
-    color: #198754; }
-  .dashboard__content {
-    height: calc(100vh - 32px - 32px - 36px - 48px); }
-
-.assignment {
-  width: 100%;
-  gap: 2%; }
-  .assignment-goal {
-    width: 35%; }
-  .assignment-content {
-    width: 63%; }
-  .assignment-detail__comment {
-    overflow-y: scroll;
-    max-height: 60vh; }
-  .assignment__photo--1 {
-    background: url("/assets/images/emilywang.jpeg") center center no-repeat;
-    background-size: cover; }
-  .assignment__photo--2 {
-    background: url("/assets/images/andychen.jpeg") center center no-repeat;
-    background-size: cover; }
-
-.editor header {
-  background-color: #ced4da;
-  padding: 18px 25px; }
-  .editor header > * {
-    margin-right: 24px; }
 
 /*# sourceMappingURL=all.css.map */

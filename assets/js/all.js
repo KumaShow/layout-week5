@@ -1,24 +1,27 @@
 "use strict";
 
-$(document).ready(function () {
-  $('.sidebar__link').click(function (e) {
-    $('.sidebar__link').removeClass('is-active');
-    $(this).addClass('is-active');
-  });
-  $('#grade-icon').click(function (e) {
+$(function () {
+  // sidebar
+  $('.sidebar__link').on('click', function () {
+    $('.sidebar__link').removeClass('is-active'); // $(this).addClass('is-active');
+    // $(this).toggleClass('is-active');
+  }); // assignment 頁
+
+  $('#grade-icon').on('click', function () {
     $('#grade-icon').toggleClass('no-fill');
+  }); // admin 頁
+
+  $('.btn-more').on('click', function () {
+    $('.btn-more').toggleClass('d-none');
+    $('.view-modal__btn').toggleClass('d-none');
   });
-  $('#assignment-reply').click(function (e) {
+  $('#assignment-reply').on('click', function () {
     $('#editor').removeClass('d-none');
     $('#assignment-nav').addClass('d-none');
   });
-  $('#editor-cancel').click(function (e) {
+  $('#editor-cancel').on('click', function () {
     $('#editor').addClass('d-none');
     $('#assignment-nav').removeClass('d-none');
-  });
-  $('.btn-more').click(function (e) {
-    $('.btn-more').toggleClass('d-none');
-    $('.view-modal__btn').toggleClass('d-none');
   });
 });
 //# sourceMappingURL=all.js.map

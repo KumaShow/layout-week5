@@ -12,13 +12,13 @@
 <body>
   <main class="d-flex">
     <aside class="sidebar bg-light py-4">
-      <h1 class="sidebar__title u-mb-32">
-        <a href="index.html">
+      <h1 class="sidebar__title mb-3">
+        <a href="index.html" class="pb-3">
         <img src="./assets/images/logo-ANSWER.svg" alt="logo" class="logo ps-4"></a>
       </h1>
       <div class="sidebar__content">
         <ul class="sidebar__menu">
-          <li><a href="modal.html" class="sidebar__link ps-4 py-3 fw-bold">
+          <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
             <span class="material-symbols-outlined me-3">insert_chart</span>
             Dashboard</li></a>
           <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
@@ -34,7 +34,7 @@
             <span class="material-symbols-outlined me-3">group</span>
             Admin</li></a>
           <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3">settings</span>
+            <span class="material-symbols-outlined me-3" >settings</span>
             Settings</li></a>
         </ul>
         <div class="user d-flex ps-4 pe-5">
@@ -54,7 +54,7 @@
     <div class="d-flex justify-content-between mb-5">
       <div class="d-flex align-items-center">
         <h2 class="dashboard__title fs-4 fw-bold me-5">Admin</h2>
-        <a href="#!" class="d-flex fw-bold">
+        <a href="#!" class="d-flex fw-bold" data-bs-toggle="modal" data-bs-target="#newModal">
           <span class="material-symbols-outlined link-success me-2">
           add
           </span> Add New Admin
@@ -99,11 +99,12 @@
                 visibility
               </span>
             </a>
-            <a href="#!"><span class="material-symbols-outlined">
+            <a href="#!"><span class="material-symbols-outlined" data-bs-toggle="modal" data-bs-target="#editModal">
               edit
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#2</th>
           <td>Zaina Goldsmith</td>
@@ -118,6 +119,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#3</th>
           <td>Mahima Lopez</td>
@@ -132,6 +134,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#4</th>
           <td>Pharrell Murray</td>
@@ -146,6 +149,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#5</th>
           <td>Annika Mcbride</td>
@@ -160,6 +164,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#6</th>
           <td>Fatimah Clark</td>
@@ -174,6 +179,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#7</th>
           <td>Klaudia Rhodes</td>
@@ -188,6 +194,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#8</th>
           <td>Tillie Lucero</td>
@@ -202,6 +209,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#9</th>
           <td>Sabrina Stephenson</td>
@@ -216,6 +224,7 @@
             </span></a>
           </td>
         </tr>
+
         <tr class="border-bottom">
           <th scope="row">#10</th>
           <td>Annie Smith</td>
@@ -263,7 +272,96 @@
 </section>
 
 <!-- newModal -->
+<div class="modal new-modal" id="newModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content new-modal__content">
+      <!-- New Admin -->
+      <div class="modal-header border-0 mx-3 mt-3">
+        <h5 class="modal-title fs-4 fw-bold">New Admin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body u-px-4">
+        <!-- Account -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Account</h6>
+          <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control border-dark" id="inputName">
+          </div>
+          <div>
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control border-dark" id="inputEmail" aria-describedby="emailHelp">
+          </div>
+        </div>
+        <!-- Verification -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Verification</h6>
+          <p class="fw-bold u-mb-18">
+            <span class="material-symbols-outlined text-danger me-2">
+              warning
+            </span>
+            Unverified
+          </p>
+          <button type="button" class="btn btn-lg u-btn-outline-gray-400 text-success fs-6 fw-bold w-100">Send Verification Mail</button>
+        </div>
+        <!-- Access Level -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Access Level</h6>
+          <select class="form-select form-select-lg text-secondary border-dark" aria-label=".form-select-lg example">
+            <option selected>-Choose access level-</option>
+            <option value="1">Admin</option>
+            <option value="2">Sales</option>
+            <option value="3">RD</option>
+          </select>
+        </div>
 
+        <div>
+          <h6 class="fw-bold fs-5 mb-3">Custom Access</h6>
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="lecture" id="flexCheckLecture">
+              <label class="form-check-label" for="flexCheckLecture">
+                Lecture
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="coupon" id="flexCheckCoupon">
+              <label class="form-check-label" for="flexCheckCoupon">
+                Coupon
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="message" id="flexCheckMessage">
+              <label class="form-check-label" for="flexCheckMessage">
+                Message
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="setting" id="flexCheckSetting">
+              <label class="form-check-label" for="flexCheckSetting">
+                Setting
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="taskMenu" id="flexCheckTaskMenu">
+              <label class="form-check-label" for="flexCheckTaskMenu">
+                Task Menu
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer border">
+        <button type="button" class="btn btn-outline-success me-3 u-px-4" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success me-3 u-px-4">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- viewModal -->
 <div class="modal fade view-modal" id="viewModal" tabindex="-1">
@@ -279,17 +377,19 @@
           <p>Admin</p>
           <h2 class="fw-bold mb-2">Emir Wicks</h2>
           <p class="text-secondary u-fs-14 mb-3">emir.wicks@mail.com</p>
-          <div class="d-flex justify-content-between u-mb-32">
+
+          <div class="d-flex justify-content-between">
             <span class="bg-light py-1 px-2 border-0 rounded">Verified</span>
-            <span id="btn-more" class="material-symbols-outlined btn-more">
+            <span class="material-symbols-outlined btn-more">
               <a href="#!">expand_more</a>
             </span>
-            <span id="btn-more" class="material-symbols-outlined btn-more d-none">
+            <span class="material-symbols-outlined btn-more d-none">
               <a href="#!">expand_less</a>
             </span>
           </div>
-          <div class="view-modal__btn d-flex d-none">
-            <button type="button" class="view-modal__btn--1 btn btn-outline-danger" data-bs-dismiss="modal">Deactivate</button>
+
+          <div class="view-modal__btn u-pt-4 d-flex d-none">
+            <button type="button" class="view-modal__btn--1 btn btn-outline-danger fw-bold" data-bs-dismiss="modal">Deactivate</button>
             <button type="button" class="view-modal__btn--2 btn btn-success">Edit</button>
           </div>
         </div>
@@ -300,7 +400,115 @@
 </div>
 
 <!-- editModal -->
+<div class="modal new-modal" id="editModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content new-modal__content">
+      <div class="modal-header border-0 mx-3 mt-3">
+        <h5 class="modal-title fs-4 fw-bold">Edit Admin</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
 
+      <div class="modal-body u-px-4 mb-4">
+        <!-- Account -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Account</h6>
+          <div class="mb-3">
+            <label for="inputName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="inputName" value="Emir Wicks" readonly>
+          </div>
+          <div>
+            <label for="inputEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" value="emir.wicks@mail.com" readonly>
+          </div>
+        </div>
+        <!-- Verification -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Verification</h6>
+          <div class="d-flex justify-content-between align-items-center u-mb-18">
+            <p class="fw-bold">
+              <span class="material-symbols-outlined text-success me-2">
+                check_circle
+              </span>
+              Verified
+            </p>
+            <p class="u-fs-14">2020/4/12</p>
+          </div>
+          <button type="button" 
+          class="btn btn-lg u-btn-outline-gray-400 u-text-gray-400 fs-6 fw-bold w-100" disabled>Send Verification Mail</button>
+        </div>
+        <!-- Access Level -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Access Level</h6>
+          <select class="form-select form-select-lg border-dark text-secondary" aria-label=".form-select-lg example">
+            <option selected>-Choose access level-</option>
+            <option value="1" selected>Admin</option>
+            <option value="2">Sales</option>
+            <option value="3">RD</option>
+          </select>
+        </div>
+        <!-- Custom Access -->
+        <div class="border-bottom pb-4 mb-4">
+          <h6 class="fw-bold fs-5 mb-3">Custom Access</h6>
+          <div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="lecture" id="flexCheckLecture">
+              <label class="form-check-label" for="flexCheckLecture">
+                Lecture
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="coupon" id="flexCheckCoupon">
+              <label class="form-check-label" for="flexCheckCoupon">
+                Coupon
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="message" id="flexCheckMessage">
+              <label class="form-check-label" for="flexCheckMessage">
+                Message
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="setting" id="flexCheckSetting">
+              <label class="form-check-label" for="flexCheckSetting">
+                Setting
+              </label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="taskMenu" id="flexCheckTaskMenu">
+              <label class="form-check-label" for="flexCheckTaskMenu">
+                Task Menu
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- Deactivate Account -->
+        <div>
+          <h6 class="fw-bold fs-5 mb-3">Deactivate Account</h6>
+          <p class="mb-3 text-danger">
+            <span class="material-symbols-outlined me-2">
+              warning
+            </span>
+            This cannot be undone!
+          </p>
+          <button type="button" 
+          class="btn btn-outline-danger btn-lg text-danger fs-6 fw-bold w-100 u-hover-white">
+            Deactivate This Account
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-footer border">
+        <button type="button" class="btn btn-outline-success me-3 u-px-4" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-success me-3 u-px-4">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   </main>
 
