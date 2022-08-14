@@ -9,14 +9,15 @@
 .no-fill {
   font-variation-settings: 'FILL' 0;
 }
-
+/*
+助教建議改為<code>標籤，並用BS語法就好
 .u-mark-tag {
   font-family: 'Roboto Mono', monospace;
   font-size: 14px;
   color: $success;
   background-color: $gray-100;
   vertical-align: baseline;
-}
+}*/
 
 .u-text-gray-400 {
   color: $gray-400;
@@ -28,6 +29,14 @@
 
 .u-hover-white:hover {
   color: $white !important;
+}
+
+.u-bg-success {
+  a:hover,
+  &.active .page-link{
+    background-color: $success;
+    color: $white;
+  }
 }
 
 .u-btn-outline-gray-400 {
