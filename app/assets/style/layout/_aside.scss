@@ -16,7 +16,8 @@
       background-color: $gray-400;
     }
   }
-  .is-active{
+  &__link.is-active,
+  &__link:hover{
     color: $success;
     &::before {
       content: "";
