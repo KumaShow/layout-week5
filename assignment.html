@@ -18,24 +18,42 @@
       </h1>
       <div class="sidebar__content">
         <ul class="sidebar__menu">
-          <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3">insert_chart</span>
-            Dashboard</li></a>
-          <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3">forum</span>
-            Question</li></a>
-          <li><a href="assignment.html" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3">assignment</span>
-            Assignment</li></a>
-          <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3">video_library</span>
-            Course</li></a>
-          <li><a href="index.html" class="sidebar__link ps-4 py-3 fw-bold is-active">
-            <span class="material-symbols-outlined me-3">group</span>
-            Admin</li></a>
-          <li><a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
-            <span class="material-symbols-outlined me-3" >settings</span>
-            Settings</li></a>
+          <li>
+            <a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
+              <span class="material-symbols-outlined me-3">insert_chart</span>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
+              <span class="material-symbols-outlined me-3">forum</span>
+              Question
+            </a>
+          </li>
+          <li>
+                        <a href="assignment.html" class="sidebar__link ps-4 py-3 fw-bold is-active">
+                          <span class="material-symbols-outlined me-3">assignment</span>
+              Assignment
+            </a>
+          </li>
+          <li>
+            <a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
+              <span class="material-symbols-outlined me-3">video_library</span>
+              Course
+            </a>
+          </li>
+          <li>
+                        <a href="index.html" class="sidebar__link ps-4 py-3 fw-bold">
+                          <span class="material-symbols-outlined me-3">group</span>
+              Admin
+            </a>
+          </li>
+          <li>
+            <a href="#!" class="sidebar__link ps-4 py-3 fw-bold">
+              <span class="material-symbols-outlined me-3" >settings</span>
+              Settings
+            </a>
+          </li>
         </ul>
         <div class="user d-flex ps-4 pe-5">
           <div class="user__photo u-user-photo-rounded me-3"></div>
@@ -53,12 +71,17 @@
   <header  class="d-flex justify-content-between mb-5">
     <div class="d-flex align-items-center">
       <h2 class="dashboard__title fs-4 fw-bold me-5">Assignment</h2>
-      <a href="#!" class="d-flex fw-bold">
-        All Courses
-        <span class="material-symbols-outlined link-success ms-2">
-          expand_more
-        </span> 
-      </a>
+      <div class="dropdown">
+        <a class="btn dropdown-toggle" href="#" role="button" id="dropdownAllCourses" data-bs-toggle="dropdown" aria-expanded="false">
+          All Courses
+        </a>
+      
+        <ul class="dropdown-menu" aria-labelledby="dropdownAllCourses">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
+        </ul>
+      </div>
     </div>
     <div class="d-flex align-items-center">
       <a href="#!" class="me-4"><span class="material-symbols-outlined">
@@ -72,7 +95,18 @@
   <!-- 後台主內容區 -->
   <section class="dashboard__content">
     <!-- 篩選bar -->
-    <div class="d-flex justify-content-between align-items-center">
+    <div class="dropdown">
+      <a class="btn  dropdown-toggle" href="#" role="button" id="dropdownAll" data-bs-toggle="dropdown" aria-expanded="false">
+        All
+      </a>
+    
+      <ul class="dropdown-menu" aria-labelledby="dropdownAll">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+    <!-- <div class="d-flex justify-content-between align-items-center">
       <a href="#!" class="d-flex fw-bold u-mb-6">
         All (4)
         <span class="material-symbols-outlined link-success ms-2">
@@ -80,62 +114,51 @@
         </span> 
       </a>
       <p class="text-secondary u-fs-12">2 comments</p>
-    </div>
+    </div> -->
     <!-- 任務指派區 -->
     <section class="assignment d-flex">
       <!-- 左邊: task -->
-      <ul class="assignment-goal">
-        <li class="border u-p-12 u-bg-gray-400">
-          <a href="#!">
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="u-fs-12">Chapter Assignment 2</p>
-              <span class="u-fs-12">4 hrs ago</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="fw-bold">Please check this file…</h2>
-              <span class="u-fs-12 text-secondary">Emily Wang</span>
-            </div>
-          </a>
-        </li>
-
-        <li class="border u-p-12">
-          <a href="#!">
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="u-fs-12">Chapter Assignment 1</p>
-              <span class="u-fs-12">12 hrs ago</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="fw-bold">My Homework</h2>
-              <span class="u-fs-12 text-secondary">David Xu</span>
-            </div>
-          </a>
-        </li>
-
-        <li class="border u-p-12">
-          <a href="#!">
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="u-fs-12">Final Assignment</p>
-              <span class="u-fs-12">18 hrs ago</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="fw-bold">Have a problem with this…</h2>
-              <span class="u-fs-12 text-secondary">Tony Wei</span>
-            </div>
-          </a>
-        </li>
-
-        <li class="border u-p-12">
-          <a href="#!">
-            <div class="d-flex justify-content-between align-items-center">
-              <p class="u-fs-12">Final Assignment</p>
-              <span class="u-fs-12">19 hrs ago</span>
-            </div>
-            <div class="d-flex justify-content-between align-items-center">
-              <h2 class="fw-bold">Did I do it right?</h2>
-              <span class="u-fs-12 text-secondary">Christina Lin</span>
-            </div>
-          </a>
-        </li>
+      <ul class="list-group rounded-0">
+        <a href="#" class="list-group-item list-group-item-action u-bg-gray-400" aria-current="true">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="u-fs-12">Chapter Assignment 2</p>
+            <span class="u-fs-12">4 hrs ago</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-bold">Please check this file…</h2>
+            <span class="u-fs-12 text-secondary">Emily Wang</span>
+          </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="u-fs-12">Chapter Assignment 1</p>
+            <span class="u-fs-12">12 hrs ago</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-bold">My Homework</h2>
+            <span class="u-fs-12 text-secondary">David Xu</span>
+          </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="u-fs-12">Final Assignment</p>
+            <span class="u-fs-12">18 hrs ago</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-bold">Have a problem with this…</h2>
+            <span class="u-fs-12 text-secondary">Tony Wei</span>
+          </div>
+        </a>
+        <a href="#" class="list-group-item list-group-item-action">
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="u-fs-12">Final Assignment</p>
+            <span class="u-fs-12">19 hrs ago</span>
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <h2 class="fw-bold">Did I do it right?</h2>
+            <span class="u-fs-12 text-secondary">Christina Lin</span>
+          </div>
+        </a>
       </ul>
       <!-- 右邊: task細項 -->
       <div class="assignment-content">
@@ -156,14 +179,14 @@
               <div class="border-bottom pb-3">
                 <h3 class="fw-bold mb-1">Emily Wang</h3>
                 <p class="u-fs-12 text-secondary mb-3">10:38 AM (4 hours ago)</p>
-                <p class="u-fs-14 mb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <span class="u-mark-tag">div</span> is bigger than the height of the <span class="u-mark-tag">img</span> ? There is a gap below the image, but it doesn’t seems to be a padding/margin.<br>What is the gap or extra space below image?</p>
-                <div class="d-inline-block">
-                  <a href="#!" class="fw-bold d-flex u-bg-gray-400 py-2 u-ps-12 u-pe-2 border rounded">
-                    <span class="material-symbols-outlined fw-bold me-2">
-                    attach_file
-                    </span>
+                <p class="u-fs-14 mb-3">Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code class="text-success bg-light">div</code> is bigger than the height of the <code class="text-success bg-light">img</code> ? There is a gap below the image, but it doesn’t seems to be a padding/margin.<br>What is the gap or extra space below image?</p>
+                <button type="button" class="d-flex align-items-center btn btn-light fw-bold border">
+                  <span class="material-symbols-outlined fw-bold me-2">
+                  attach_file
+                  </span>
+                  <a href="#!" download="HW-2-David.zip">
                     HW-2-David.zip</a>
-                </div>
+                </button>
               </div>
             </div>
             
@@ -185,8 +208,15 @@
                   </div>
                 </div>
   
+                <p class="mb-4">
+                  Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                </p>
+                <p class="mb-4">You can:</p>
                 <p>
-                  Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.<br><br>You can:<br><br>&emsp;• adjust the <span class="u-mark-tag">vertical-align</span> of the image to position it elsewhere (e.g. the <span class="u-mark-tag">middle</span> ) or <br>&emsp;• change the <span class="u-mark-tag">display</span> so it isn’t inline.
+                  &emsp;• adjust the <code class="text-success bg-light">vertical-align</code> of the image to position it elsewhere (e.g. the <code class="text-success bg-light">middle</code> ) or
+                </p>
+                <p>
+                  &emsp;• change the <code class="text-success bg-light">display</code> so it isn’t inline.
                 </p>
               </div>
             </div>
@@ -194,7 +224,10 @@
           </div>
 
           <!-- editor編輯器 -->
-          <div class="editor border-top d-none" id="editor">
+          <div id="ckeditor" class="d-none">
+            <div id="editor"></div>
+          </div>
+          <!-- <div class="editor border-top d-none" id="editor">
             <header class="d-flex align-items-center">
               <a href="#!" class="fw-bold">Body Text
                 <span class="material-symbols-outlined ms-2">
@@ -233,7 +266,7 @@
               <a href="#!" class="fw-bold btn btn-outline-success u-hover-white me-2" id="editor-cancel">Cancel</a>
               <a href="#!" class="fw-bold btn btn-success u-hover-white me-4">Reply</a>
             </div>
-          </div>
+          </div> -->
         </div>
         <!-- assignment 底部 navbar -->
         <nav class="assignment-nav mb-3 d-flex justify-content-between align-items-center" id="assignment-nav">
@@ -246,9 +279,14 @@
             </span>
           </div>
 
-          <div class="d-flex">
+          <div id="assignment-reply" class="d-flex">
             <a href="#!" class="fw-bold btn btn-outline-success u-hover-white me-3">Mark as read</a>
-            <a href="#editor" class="fw-bold btn btn-success u-hover-white" id="assignment-reply">Reply</a>
+            <a href="#ckeditor" class="fw-bold btn btn-success u-hover-white" id="assignment-btn-reply">Reply</a>
+          </div>
+
+          <div id="editor-reply" class="d-flex justify-content-end d-none">
+            <a href="#!" class="fw-bold btn btn-outline-success u-hover-white me-3" id="editor-cancel">Cancel</a>
+            <a href="#!" class="fw-bold btn btn-success u-hover-white">Reply</a>
           </div>
         </nav>
       </div>
@@ -262,6 +300,7 @@
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/35.0.1/classic/ckeditor.js"></script>
   <script src="./assets/js/vendors.js"></script>
   <script src="./assets/js/all.js"></script>
 </body>
