@@ -20,11 +20,11 @@
 }*/
 
 .u-text-gray-400 {
-  color: $gray-400;
+  color: $gray-400 !important;
 }
 
-.u-bg-gray-400 {
-  background-color: $gray-400;
+.u-bg-gray-400{
+  background-color: $gray-400 !important;
 }
 
 .u-hover-white:hover {
@@ -35,7 +35,7 @@
   a:hover,
   &.active .page-link{
     background-color: $success;
-    color: $white;
+    color: $white !important;
   }
 }
 
